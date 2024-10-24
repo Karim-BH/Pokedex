@@ -3,6 +3,10 @@
 
 function PokemonCard({pokemon}) {
 
+    interface pokemon {
+        name: string;
+        imgSrc?: string;
+      }
     
     return (
         <figure>
