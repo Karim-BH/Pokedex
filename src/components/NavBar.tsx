@@ -9,12 +9,9 @@ import pokemonList from "./PokemonList";
 
 
   
-  function NavBar({pokemonIndex, setPokemonIndex}: NavBarProps) { 
+  function NavBar({setPokemonIndex}: NavBarProps) { 
 
-    if (pokemonList[pokemonIndex].name.toLowerCase() === "pikachu") {
-      alert("pika pikachu !!!");
-    }
-  
+    
 
   return (
     <div>
