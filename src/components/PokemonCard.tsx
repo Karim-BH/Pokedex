@@ -4,7 +4,7 @@ interface Pokemon {
         imgSrc?: string;
     }
 }
-  
+
 
 function PokemonCard({pokemon}: Pokemon) {
    
