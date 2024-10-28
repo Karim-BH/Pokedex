@@ -1,31 +1,28 @@
 import pokemonList from "./PokemonList";
 
 
+
   interface NavBarProps {
     pokemonIndex: number;
     setPokemonIndex: (index: number) => void;
   }
 
 
+  
+  function NavBar({setPokemonIndex}: NavBarProps) { 
+  
 
-  
-  function NavBar({pokemonIndex, setPokemonIndex}: NavBarProps) { 
-  
-    const handleClickPrevious = () => {
-      if (pokemonIndex > 0) {
-        setPokemonIndex(pokemonIndex - 1);
-      }
-    };
-  
-    const handleClickNext = () => {
-      if (pokemonIndex < pokemonList.length - 1) {
-        setPokemonIndex(pokemonIndex + 1);
-      }
-    };
   return (
     <div>
-      <button type="button" onClick={handleClickPrevious }>Précedent</button>
-      <button type="button" onClick={handleClickNext}>Suivant</button>
+      {pokemonList.map((pokemon, index) => (
+        <button 
+          key={pokemon.name} 
+          onClick={() => setPokemonIndex(index)} 
+         
+        >
+          {pokemon.name}
+        </button>
+      ))}
     </div>
   )
 }
